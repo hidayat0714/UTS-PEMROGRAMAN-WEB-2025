@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Saya</title>
+    <style>
+       #konten {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    margin: 20px auto; 
+}
+        button {
+            background-color: #0fa6ec;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0044ff;
+        }
+   
+        body {
+            background-image: url('wanglinn.webp');
+            background-size: cover;        /* Agar gambar menutupi seluruh layar */
+            background-repeat: no-repeat;  /* Tidak mengulang gambar */
+            background-position: center;   /* Posisi di tengah */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="background-color: #1a1ae6; color: white; padding: 10px; text-align: center;">
+        Halo, Saya Muhamad Hidayat
+    </h1>
+    <p style="text-align: center; color: rgb(12, 245, 225);"></p>
+    <div style="text-align: center;">
+        <img src="ajim.JPEG" alt="Foto Profil" width="250" style="border-radius: 50%;">
+    </div>
+
+    <div id="konten">
+        <h2>Tentang Saya</h2>
+        <p>Resimen Mahasiswa Satuan 611/Hasnur Politeknik Hasnur</p>
+
+        <h2>Keahlian</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript Dasar</li>
+            <li>PHP Dasar</li>
+        </ul>
+
+        <h2>Keahlian Luar kampus</h2>
+        <ul>
+            <li>Pandai Manjat Pohon kelapa</li>
+            <li>Memiliki Keahlian Dalam Bidang Pertanian</li>
+            <li>Kuliah Sambil Kerja</li>
+        </ul>
+
+        <h2>Kontak</h2>
+        <p>Email: garudalangit72@gmail.com</p>
+        <p>Instagram: @hidayat_0714</p>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="toggleKonten()">Sembunyikan Biodata</button>
+    </div>
+
+    <button onclick="toggleKonten()">Sembunyikan Biodata</button>
+
+    <script>
+        const konten = document.getElementById("konten");
+        const tombol = document.querySelector("button");
+
+        function toggleKonten() {
+            if (konten.style.display === "none") {
+                konten.style.display = "block";
+                tombol.textContent = "Sembunyikan Biodata";
+            } else {
+                konten.style.display = "none";
+                tombol.textContent = "Tampilkan Biodata";
+            }
+        }
+    </script>
+</body>
+</html>
